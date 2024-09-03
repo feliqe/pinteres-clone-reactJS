@@ -1,0 +1,61 @@
+Clon de Pinteres con react
+
+------------------------- Intaladores y componentes --------------------------------------
+
+- la pagina donde convierte codigo svg en codigo para poder usarlo en react
+    - https://react-svgr.com/playground/
+    - depsues de generarlo en la pagina, copiamos el contenido en. svg
+    - muestra esta en icons -> Logo.jsx
+- los creamos una cuenta en la siguinete pagina para poder usar la Api de imagenes que usa pinteres
+    - https://unsplash.com/developers
+        - despues de registrarlos se seleccionamos donde dice new aplicacion
+        - se aceptan todos los terminos de condiciones los check, le damos en aceptar
+        - ingresamos un nombre al proyecto y una descripcion aceptamos
+        - nos motrara la cantidad de consultas por hora que estanh permitidas en nuestro perfil gratis (50 imagnes por hora)
+            - en el siguiente link donde esta la documentacion  de la pagina, donde nos indicara la ruta donde podemos enlasar nuestro proyecto con la pagina
+            - https://unsplash.com/documentation#creating-a-developer-account
+                - en el itemLibraries & SDKs
+                - seleccionamos la de la javascript
+                    - abrira un repositorio de guthub donde seleccionamos donde dice
+                    - Official JavaScript wrapper for the Unsplash API
+                    - el link nos enviara a npm donde ejecutaremos el siguiente comando en la terminal del proyecto
+                        - npm i unsplash-js
+                    - validamos la instalacion en package.json
+                    - abrimos en la misma pagina el link de javascript para acceso a la key
+                        - copiamos el access key de unsplash
+                        - la pegamos en App.jsx para poder usarlo y asociar
+- para poder darle el formato de la imagenes que esten por diferentes tamaños dentro del proyecto, ingresamos a la siguientes pagina
+    - https://mui.com/material-ui/react-masonry/
+    - buscamo en search la palabra masonry (el link esta directo)
+        - despues en el menu de la parte izquierda ingresamos en about o el siguiente link
+        - https://mui.com/material-ui/about-the-lab/
+            - en el item de instalacion tomamos la palabra @mui/lab
+            - para poder completar la siguiente linea de comando y realiza la intalacion por la consola
+                - npm install @mui/material @emotion/react @emotion/styled @mui/lab
+                    - validamos la instalacion en package.json
+- para poder usar el infinite scroll se tiene que instalar el package, se ingresa a la siguiente pagina
+    - https://www.npmjs.com/package/react-infinite-scroll-component
+        - copiamos el instalador el comando a continuacion
+        - npm i react-infinite-scroll-component
+            - validamos la instalacion en package.json
+- para poder tener estados globales usaremos una libreria, se ingresa enla siguiente pagina
+    - https://www.npmjs.com/package/zustand
+    - copiamos el instalador el comando a continuacion
+    - npm i zustand
+        - validamos la instalacion en package.json
+
+------------------------- conceptos archivos --------------------------------------
+
+- Header.jsx  es donde se mostrara la cabezera de la pagina, la accion de enter
+- Card.jsx  es la estructura de la imagen y la informacion que tiene
+- bookStore.js  se manipulara el value inicial de la pagina, se seteara el nuevo valor al momento de iniciar una nueva busqueda
+
+----------------------------- crear archivos --------------------------------------
+
+- creamos la carpeta components
+- en components se crea Header.jsx
+- en components se crea Card.jsx
+- creamos la carpeta icons
+- en icons se crea Logo.jsx
+- creamos la carpeta store en src
+- en store se crea bookStore.js
